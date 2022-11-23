@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Các cách khởi tạo đối tượng
+        // 1. Khởi tạo literal
+        let student1={};
+        let student2={
+            //Thuộc tính của đối tượng
+            name: "Nguyễn Văn A",
+            age: 20,
+            address:" Hà Nội",
+            //Hành vi của đối tượng
+            hello: function talk(){
+                console.log("Xin chào");
+            },
+            sum: function add(num1, num2){
+                return num1+num2;
+            }
+        }
+        // 2. Khởi tạo đối tượng qua constructor
+        let person= new Object();
+        console.log("Persion", person);
+        //3. Khởi tạo đối tượng qua hàm tĩnh của Object
+        let book1=Object.creat({});
+        console.log("book1", book1);
+        let book2=Object.creat({nam:"Sách văn học", price:1000});
+        console.log("book2", book2);
+        //Cách truy xuất vào các đặc điểm và hành vi của đối tượng
+        //Khởi tạo giá trị cho các đặc điểm của đối tượng person
+        person.name="Nguyễn Văn B"
+        person.age=25;
+        person.love=function loveu(){
+            // console.log("I love U")
+            return "I love you"
+        }
+        console.log("Person sau khi khởi tạo các đặc điểm, hành vi"+ person);
+        // Gán tuổi cho studen2 bằng 30
+        student2.age=30;
+        //- In ra tên của sinh viên 2
+        console.log("Studen2", student2.name);
+        // In ra tuổi của sv2
+        console.log("Tuổi của sinh viên 2"+ studen2['age']);
+        //Gọi hành vi love của đối tượng person
+        let str=person.love
+        console.log(person.love());
+        //Sử dụng vòng lặp for-in để duyệt tên thuộc tính của các đối tượng
+        for (const key in student2){
+          console.log(student2)  
+        }
+
+    </script>
+</body>
+</html>

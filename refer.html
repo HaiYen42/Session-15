@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> // Thuộc tính và phương thức đối tượng
+        //Cách 1: khai báo New Object/thuộc tính của newObject
+        var Car=new Object();
+        Car.type='';
+        Car.model='';
+        Car.color='';
+        //Cách 2:  Sử dụng từ khóa {} và thêm thuộc tính ngay lúc khai báo
+        var Car={
+            type:"",
+            model:"",
+            color:"",
+        }
+        //Cách 3: Sử dụng từ khóa {} và thêm thuộc tính sau đó:
+        var Car={};
+        Car.type='';
+        Car.model='';
+        Car.color='';
+
+        //Phương thức là những hành động (có thể hiểu là hàm) của đối tượng
+        //Cách 1: Sử dụng từ khóa NewObject.
+        var Car= new Object;
+                //Thêm phương thức:
+        Car.addCar=function(){
+            console.log("This function add car")
+        };
+        Car.deleteCar=function(){
+            console.log("This function delete car")
+        };
+
+        //Cách 2: Sử dụng từ khóa {} và thêm phương thức ngay lúc khai báo:
+        var Car={
+            addCar: function(){
+                console.log("This function add car");
+            },
+            deleteCar: function(){
+                console.log("This function delete car")
+            }
+        };
+        var Car={};
+        Car.addCar=function(){
+            console.log("This function add car");
+        };
+        Car.deleteCar=function(){
+            console.log("This function delete car");
+        };
+
+        //Cách 3: Cách gọi thuộc tính phương thức của Object
+
+        var Car={
+            modal: "Lexus",
+            type: "500",
+            color:"White"
+        };
+        Car.modal
+        Car.type
+        Car.color
+    </script>
+</body>
+</html>
