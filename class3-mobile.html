@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <script>
+        //1. Khởi tạo lớp của Mobile gồm 
+        function Mobile(pin, draftMess, receiveMess, sendMess,status,consumption){
+            this.pin=pin;
+            this.draftMess=draftMess;
+            this.receiveMess=receiveMess;
+            this.sendMess=sendMess;
+            this.status=status;
+            this.consumption=this.pin;
+
+
+            this.checkStatus=function(){
+                if(this.status==false){
+                    console.log("Điện thoại đang tắt");
+                }
+                else{
+                    console.log("Điện thoại đang hoạt động");
+                }
+                this.consumption--;
+            }
+
+            this.turnMobile=function(){
+                if(this.status==false){
+                    this.status=true;
+                    console.log("Welcome");
+                }else{
+                    console.log("Good night");
+                 
+                }
+                
+            }
+
+            this.statusPin=function(){
+                if(pin<100){
+                    console.log("Vui lòng sạc thêm");
+                }else{
+                    console.log("Pin đã đầy");
+                }
+              
+            }
+
+            this.draftMess=function(){
+                if(status){
+                    console.log('ulatroiw');
+                }
+            }
+
+            this.receiveMessege = function () {
+          if (status) {
+            for (var i = 0; i < this.receiveMess.length; i++) {
+              document.write(this.receiveMess[i]);
+              console.log(this.receiveMess[i]);
+            }
+            this.consumption--;
+          }
+        };
+            this.sendMessenger=function(){
+                if(status){
+                    for(var i=0;i<sendMess.length;i++){
+                        document.write(this.sendMess[i]+"<br>");
+                        console.log(this.sendMess[i]);
+                    }
+                }
+                this.consumption--;
+            }
+            this.boxSendMess=function(){
+                if(status){
+                    console.log(this.sendMess);
+                }
+            }
+            this.boxReceiveMess=function(){
+                if(status){
+                    console.log(this.receiveMess);
+                }
+            }
+            
+            this.consumptionPin=function(){
+                if(status){
+                    console.log(this.consumption);
+                }
+            }
+        }
+    
+
+        // Khởi tạo Object
+        let mobile = new Mobile(
+        80,
+        "tôi là Yến",
+        ["alo, em chào chị", "vâng, ai đấy ạ..."],
+        ["Helo","World"], 
+        true,
+        
+      );
+        //Gọi hàm
+   
+        // mobile.checkStatus();
+        // mobile.turnMobile();
+        // mobile.statusPin();
+        mobile.draftMess();
+        console.log("Hộp thư nhận được:");
+        mobile.receiveMessege();
+        console.log("Tin nhắn gửi:");
+        mobile.sendMessenger();
+        console.log("Hộp thư gửi đi:");
+        mobile.boxSendMess();
+        console.log("Hộp thư nhận được");
+        mobile.boxReceiveMess();
+        console.log("Lượng pin còn lại là");
+        mobile.consumptionPin();
+        
+    </script>
+
+  
+</body>
+</html>
