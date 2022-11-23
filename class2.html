@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //1. Khởi tạo lớp Temperature gồm doC
+        let Temperature = function (doC){
+            this.doC=doC;
+            this.doF=function getdoF(){
+                return this.doC*1.8 +32;
+            }
+            this.doKenvin=function getdoKenvin(){
+                return this.doC + 273.15;
+            }
+        }
+        //2. Khởi tạo đối tượng từ lớp Temperature
+            let tem= new Temperature(25);
+        //3. In ra độ F & độ Kenvin
+            console.log("Độ F là", tem.doF());
+            console.log("Độ Kenvin là",tem.doKenvin());
+        //4. Thay đổi độ C
+            tem.doC=50;
+        //5. In ra độ F & độ Kenvin sau khi thay đổi
+            console.log("Độ F sau khi thay đổi là", tem.doF());
+            console.log("Độ Kenvin sau khi thay đổi là", tem.doKenvin());
+
+
+</script>
+</body>
+</html>

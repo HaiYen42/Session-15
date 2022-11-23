@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
+    <canvas id="myCanvas" style="border: 1px solid rgb(167, 28, 28)"></canvas>
     <script>
         let rectange={
             width:20,
@@ -25,6 +26,35 @@
         }
           console.log("Area là "+ rectange.area()); 
           rectange.permisster();
+
+          let cv=document.getElementById("myCanvas");
+          let ctx=cv.getContext("2d");
+
+
+        //Bài thầy làm
+        //1. Khởi tạo lớp Rectangle gồm width, height, getArea, getPermisster
+        // function rectangle(width,height){
+        //     this.width=width;
+        //     this.height=height;
+        //     //Khai báo hành vi đối tượng
+        //     this.area=function getArea(){
+        //         return this.width*this.height;
+        //     }
+        //     this.perimetter=function getPermisster(){
+        //         return(this.width+this.height)*2;
+        //     }
+        // }
+        // //2. Khởi tạo đối tượng từ lớp rectangle
+        // let rec=new rectangle(20,40);
+        // //3. In ra diện tích và chu vi hình chữ nhật
+        // console.log("Diện tích hình chữ nhật là", rec.area());
+        // console.log("Chu vi hcn", rec.perimetter());
+        // //4. Thay đổi chiều dài, chiều rộng hcn
+        // rec.width=30;
+        // rec.height=50;
+        // //5. In ra diện tích và chu vi hcn sau khi thay đổi chiều dài, chiều rộng
+        // console.log("Diện tích hcn sau khi thay đổi", rec.area());
+        // console.log("Chu vi hcn sau khi thay đổi", rec.perimetter());
 
     </script>
 </body>

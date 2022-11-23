@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Sử dụng canvas vẽ đường thẳng-->
+    <h2>Vẽ đường thẳng</h2>
+    <canvas style="border:1px solid black" width="500px" height="300px" id="canvas_line"></canvas>
+    <script>
+        //Truy cập đến phần tử canvas
+        let cv=document.getElementById("canvas_line");
+        //Vẽ hình 2d với contex của canvas
+        let ctx=cv.getContext("2d");
+        //Vẽ đường thẳng từ tọa độ (100,100) đến tọa độ (150,150)
+        ctx.moveTo(100,100);
+        ctx.lineTo(150,150);
+        //Vẽ đường thẳng với màu sắc mặc định
+        ctx.stroke();
+    </script>
+        // <!--Vẽ hình chữ nhật-->
+        <h2>Vẽ hình chữ nhật</h2>
+        <canvas style="border:1px solid black;" id="canvas_rectangle"></canvas>
+        <script>
+            let cvrec=document.getElementById("canvas_rectangle");
+            let ctxRec=cv.getContext("2d");
+            //Sử dụng fillStyle(color) để xác định màu sắc của hình
+            ctxRec.fillStyle="blue";
+            //Vẽ hình chữ nhật: fullRect(x,y,width,height)
+            ctxRec.fillRect(50,50,100,50);
+        </script>
+        <h2>Vẽ hình tròn</h2>
+        <canvas style="border:1px solid black;" id="canvas_circle"></canvas>
+        <script>
+            let cvCircle=document.getElementById("canvas_circle");
+            let ctxCircle=cvCircle.getContext
+            //Sử dụng beginPath() thông báo bắt đầu vẽ hình mới
+            ctxCircle.beginPath();
+            //sử dụng arc(x,y,r,begin,end)
+            ctxCircle.arc(50,50,40,0,0,2*Math.PI);
+            ctxCircle.fillStyle="red";
+            ctx.fill()
+        </script>
+        <!--Sử dụng canvas để vẽ ảnh -->
+        <h2>Vẽ ảnh</h2>
+        <canvas style="border:1px solid black;" id="canvas_circle"></canvas>
+        <script>
+            let cvImage=document.getElementById(canvas_image);
+            let ctxImage=cvImage.getContext("2d");
+            //Khởi tạo đối tượng image từ lớp image
+            let img=new Image();
+            img.onload=function(){
+
+            }
+        </script>
+
+</body>
+</html>
